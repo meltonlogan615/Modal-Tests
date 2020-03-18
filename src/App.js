@@ -1,39 +1,44 @@
-import React, { Component } from 'react';
-import Modal from './components/Modal/Modal';
-import logo from './fcc-white.png';
+import React, { Component } from "react";
+import Modal from "./components/Modal/Modal";
+import logo from "./fcc-white-small.png";
 
 class App extends Component {
   constructor() {
     super();
-      this.state = {
-        isShowing: false
-      }
+    this.state = {
+      isShowing: false
+    };
   }
 
   openModalHandler = () => {
     this.setState({
       isShowing: true
     });
-  }
+  };
 
   closeModalHandler = () => {
-      this.setState({
-        isShowing: false
-      });
-  }
+    this.setState({
+      isShowing: false
+    });
+  };
 
-  render () {
+  render() {
     return (
       <div>
-        { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
+        {this.state.isShowing ? (
+          <div onClick={this.closeModalHandler} className='back-drop'></div>
+        ) : null}
 
-        <button className="open-modal-btn" onClick={this.openModalHandler}>Test</button>
+        <button className='open-modal-btn' onClick={this.openModalHandler}>
+          Test
+        </button>
 
         <Modal
-          className="modal"
+          className='modal'
           show={this.state.isShowing}
-          close={this.closeModalHandler}>
-            <img src={logo} />
+          close={this.closeModalHandler}
+        >
+          <img src={logo} />
         </Modal>
       </div>
     );
@@ -42,4 +47,6 @@ class App extends Component {
 
 export default App;
 
-{/*This one is real and actually running */}
+{
+  /*This one is real and actually running */
+}

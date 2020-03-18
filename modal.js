@@ -1,18 +1,17 @@
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 
 function MyVerticallyCenteredModal(props) {
   return (
     <Modal
       {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
+      size='lg'
+      aria-labelledby='contained-modal-title-vcenter'
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Title id='contained-modal-title-vcenter'>
           Modal heading
         </Modal.Title>
       </Modal.Header>
@@ -36,7 +35,7 @@ function App() {
 
   return (
     <ButtonToolbar>
-      <Button variant="primary" onClick={() => setModalShow(true)}>
+      <Button variant='primary' onClick={() => setModalShow(true)}>
         Launch vertically centered modal
       </Button>
 
